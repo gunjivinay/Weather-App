@@ -1,0 +1,327 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+
+}
+
+body{
+    background: url('./images/background.avif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: "Comfortaa", sans-serif;
+    font-weight:900px ;
+    font-style: normal;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+  
+
+    
+}
+
+.inputdiv{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    position: relative;
+ 
+}
+
+#searchInput{
+    font-size: xx-large;
+    width: 80%;
+    height: 75px;
+    border-radius: 50px;
+    padding: 20px;
+    color: black;
+    outline-color: 2px grey;
+ 
+}
+
+.left{
+    height: 90vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#hrline{
+   width: 80%;
+   border: 2px solid black;
+   border-radius: 10px;
+   
+}
+
+.left1div{
+    background: rgba(212,212,212,0.4);
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(15px);
+
+
+}
+
+
+
+
+.left2div{
+    background: rgba(212,212,212,0.4);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(15px);
+
+
+}
+
+
+.totalContainer{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.right{
+    width: 70%;
+    height: 90vh;
+}
+
+
+.rows{
+    height: 30vh;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.row1boxes{
+    width: 180px;
+    height: 100px;
+    background: rgba(212,212,212,0.4);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.row2boxes{
+    height: 30vh;
+    width: 50%;
+    background: rgba(212,212,212,0.4);
+   border-radius: 10px;
+   backdrop-filter: blur(15px);
+
+}
+
+
+
+.row2box1{
+    height: 180px;
+    width: 50%;
+}
+
+.row2box2{
+    height: 180px;
+    width: 50%;
+}
+
+.row3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+.row3boxes{
+    width: 10%;
+    height: 30vh;
+    background: rgba(212,212,212,0.4);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.row3boxes{
+    height: 100px;
+    width: 100px;
+  
+
+}
+
+
+.items{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.rises{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+
+.searchIcon img{
+    position: absolute;
+    top: 25px;
+    right: 160px;
+    float: right;
+}
+
+.searchIcon img :hover{
+cursor: pointer;
+}
+
+
+
+
+
+
+@media only screen and (max-width:767px){
+   
+    .left{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .left1div{
+        width: 85%;
+    }
+
+    .left2div{
+        width: 85%;
+    }
+   
+   
+    .right{
+        width: 100%;
+        
+    }
+
+    .totalContainer{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .inputdiv{
+        width: 85%;
+    }
+
+
+    #searchInput{
+        width: 85%;
+    }
+
+ 
+
+    .row1{
+       flex-wrap: wrap;
+       width: 85%;
+       margin: auto;
+       }
+
+
+       .row2{
+        flex-direction: column;
+        gap: 10px;
+       }
+
+       .row2boxes{
+        width: 85%;
+        
+       }
+
+       .row3{
+        width: 85%;
+        flex-wrap: wrap;
+        margin: auto;
+        gap: 10px;
+       }
+
+       
+.searchIcon img{
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    float: right;
+}
+
+}
+
+
+@media screen and (max-width: 1100px) and (min-width: 768px){
+
+.row1{
+    flex-wrap: wrap;
+    margin: auto;
+    width: 70%;
+    gap: 10px;
+}
+
+.row2{
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.row2boxes{
+    width: 70%;
+}
+
+
+#todayhead{
+    margin: 20px;
+}
+.row3{
+    flex-wrap: wrap;
+    margin: auto;
+    width: 70%;
+    gap: 10px;
+
+}
+
+}

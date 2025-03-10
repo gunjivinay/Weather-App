@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- input div  -->
+    <div class="container inputdiv"><input id="searchInput" type="text" placeholder="Search City">
+        <div class="searchIcon"><button><img src="./images/searchIcon.jpeg" onclick="fetchData()" id="go" alt=""
+                    width="30px" height="30px"></button></div>
+    </div>
+
+
+
+    <!-- left div -->
+    <div class="totalContainer">
+
+        <div class="left">
+            <div class="left1div">
+                <h2 class="m-0" id="cityName">Vishakapatnam</h2>
+                <h2 class="m-0"><span id="cityTemp">0</span>&deg;C</h2>
+                <h4 class="m-0" id="skyDesc">Sky description</h4>
+                <hr id="hrline">
+                <h6 class="m-0" id="date">Date</h6>
+                <h6 class="m-0" id="time">Time</h6>
+            </div>
+
+            <div class="left2div">
+                <h4 class="m-0">Comming 5 Days</h4>
+                <div id="forecastContainer">
+                    <!-- Forecast data will be inserted here dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="d-flex row1 rows">
+                <div class="row1box1 row1boxes">
+                    <h5 class="m-0">Pressure</h5> <br>
+                    <h3 class="m-0"><span id="pressureValue">0</span>&nbsp;hPa</h3>
+
+                </div>
+                <div class="row1box2 row1boxes">
+                    <h5 class="m-0">Humidity</h5> <br>
+                    <h3 class="m-0"><span id="humidityValue">0</span>&nbsp; hPa</h3>
+                </div>
+                <div class="row1box3 row1boxes">
+                    <h5 class="m-0">Sea Level</h5> <br>
+                    <h3 class="m-0"><span id="sealevelValue">0</span>&nbsp;hPa</h3>
+                </div>
+                <div class="row1box4 row1boxes">
+                    <h5 class="m-0">Ground Level</h5> <br>
+                    <h3 class="m-0"> <span id="groundlevelValue">0</span>&nbsp;hPa</h3>
+                </div>
+            </div>
+            <div class="d-flex row2 rows">
+                <div class="row2box1 row2boxes">
+
+                    <h3 class="text-center m-0">Air Quality Index (AQI)</h3>
+
+                    <div class="items">
+                        <div class="item1 items">
+                            <h3 class="m-0" id="co">CO <br> <span id="coValue">0</span></h3>
+                        </div>
+                        <div class="item2 items">
+                            <h3 class="m-0" id="so2">SO2 <br> <span id="so2Value">0</span> </h3>
+                        </div>
+                        <div class="item3 items">
+                            <h3 class="m-0" id="no2">NO2 <br> <span id="no2Value">0</span></h3>
+                        </div>
+                        <div class="item4 items">
+                            <h3 class="m-0" id="o3">O3 <br> <span id="o3Value">0</span></h3>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="row2box2 row2boxes">
+                    <h3 class="text-center m-0">Air Quality Index (AQI)</h3>
+                    <div class="rises">
+                        <div class="sunrise">
+                            <h5 class="m-0">Sunrise</h5> <br>
+                            <h4 class="m-0" id="sunriseTime">5:05Am</h4>
+                        </div>
+                        <div class="sunset">
+                            <h5 class="m-0">Sunset</h5> <br>
+                            <h4 class="m-0" id="sunsetTime">5:05Am</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="m-0 p-4 text-center" id="todayhead">Today</h5>
+            <div class="d-flex row3">
+                <div class="row3box1 row3boxes">
+                    <h5 class="m-0">6 Am <br> 0&deg;C</h5>
+                </div>
+                <div class="row3box2 row3boxes">
+                    <h5 class="m-0">9 Am <br> 0&deg;C</h5>
+                </div>
+                <div class="row3box3 row3boxes">
+                    <h5 class="m-0">12 Pm <br> 0&deg;C</h5>
+                </div>
+                <div class="row3box4 row3boxes">
+                    <h5 class="m-0">3 Pm <br> 0&deg;C</h5>
+                </div>
+                <div class="row3box5 row3boxes">
+                    <h5 class="m-0">6 Pm <br> 0&deg;C</h5>
+                </div>
+                <div class="row3box6 row3boxes">
+                    <h5 class="m-0">9 Pm <br> 0&deg;C</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="script.js">
+       
+    </script>
+</body>
+
+</html>
