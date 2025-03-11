@@ -25,6 +25,36 @@ body{
     
 }
 
+
+.left2div{
+    background: rgba(212,212,212,0.4);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(15px);
+}
+
+#forecastContainer {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.forecast-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 8px 0;
+    align-items: center;
+}
+
+.forecast-cell {
+    padding: 5px;
+    text-align: center;
+} 
+
 .inputdiv{
     height: 10vh;
     display: flex;

@@ -24,14 +24,24 @@ async function fetchForecastData(cityName) {
         
         const date = new Date(forecast.dt * 1000);
         const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
-        const dateStr = date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+        const dateStr = date.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' });
         const temp = Math.round(forecast.main.temp);
+        const weatherDesc = forecast.weather[0].description;
         
-        const forecastHtml = `<h5 class="m-0 p-1 d-flex align-items-center"> ${temp}&deg;C &nbsp;&nbsp; ${dayName} &nbsp;&nbsp; ${dateStr} </h5>`;
+        const forecastHtml = `
+            <div class="forecast-row">
+                <div class="forecast-cell">${dayName}</div>
+                <div class="forecast-cell">${dateStr}</div>
+                <div class="forecast-cell">${temp}°C</div>
+            </div>
+        `;
         forecastContainer.innerHTML += forecastHtml;
         
         count++;
     }
+
+    // ... rest of the existing code ...
+
 
 
     // 6hours update 
