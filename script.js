@@ -118,6 +118,10 @@ async function fetchData() {
 
     let cityName = document.getElementById('searchInput').value;
 
+    if(cityName === ""){
+        return alert("Please Enter the City Name")
+    };
+
 
 
 
@@ -126,7 +130,6 @@ async function fetchData() {
 
     let formattedData = await requestData.json();
 
-    console.log(formattedData);
 
 
 

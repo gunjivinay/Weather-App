@@ -117,7 +117,7 @@ body{
 }
 
 .row1boxes{
-    width: 150px;
+    width: 120px;
     height: 100px;
     background: rgba(212,212,212,0.4);
     border-radius: 10px;
@@ -129,6 +129,9 @@ body{
 
     
 }
+
+
+
 
 .row2boxes{
     height: 30vh;
@@ -264,7 +267,7 @@ cursor: pointer;
 
        .row2{
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
        }
 
        .row2boxes{
@@ -286,6 +289,12 @@ cursor: pointer;
     right: 80px;
     float: right;
 }
+
+.todayhead{
+    text-align: center;
+}
+
+
 
 }
 
